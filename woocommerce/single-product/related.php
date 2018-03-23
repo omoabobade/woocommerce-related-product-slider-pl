@@ -79,7 +79,26 @@ wp_reset_postdata();
     -moz-osx-font-smoothing: grayscale;
 	background:#ccc;
 }
+.slick-slide {
+	margin:0 10px;
+}
+@media only screen and (max-width: 480px) {
+	.products .product-inner{
+			width:80%;
+			margin:0 auto;
+	}
+}
 </style>
 <script type="text/javascript">
-jQuery('.relatedproducts').slick()
+jQuery('.relatedproducts').slick(
+	{
+		responsive: [{
+			breakpoint: 480,
+			settings: {
+				slidesToShow: 1,
+				slidesToScroll: 1
+			}
+		}]
+	}
+)
 </script>
